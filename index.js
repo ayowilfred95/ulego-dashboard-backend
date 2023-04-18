@@ -22,7 +22,7 @@ app.use('/api/airtime', airtimeRoutes)
 app.use('/api/tv-cable', tvCableRoutes)
 app.use('/api/electricity', electricityRoutes)
 
-app.get('/', (req, res)=>{
+app.get('/home', (req, res)=>{
     res.json(
         {
             "welcome": 'hello from ulego dashboard api',
