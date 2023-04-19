@@ -22,10 +22,12 @@ app.use('/api/airtime', airtimeRoutes)
 app.use('/api/tv-cable', tvCableRoutes)
 app.use('/api/electricity', electricityRoutes)
 
+const port = process.env.PORT || 5000
+
 app.get('/', (req, res)=>{
     res.json(
         {
-            "welcome": 'hello from ulego dashboard api',
+            "welcome": `hello from ulego dashboard api  ${port}`,
             "login route": 'hello from api',
             "to get Total-wallets":" hello",
             "to get wallets by page Num":" hello",
@@ -40,7 +42,7 @@ app.get('/', (req, res)=>{
         })
 })
 
-const port = process.env.PORT || 5000
+
 
 app.listen(port, ()=>{
     console.log(`listening on: https://localhost:${port}`);
