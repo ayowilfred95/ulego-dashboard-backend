@@ -27,7 +27,7 @@ const port = process.env.PORT || 5000
 app.get('/', (req, res)=>{
     res.json(
         {
-            "welcome": `hello from ulego dashboard api  ${port}`,
+            "welcome": `hello from ulego dashboard api  ${process.env.PORT}`,
             "login route": 'hello from api',
             "to get Total-wallets":" hello",
             "to get wallets by page Num":" hello",
