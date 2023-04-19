@@ -4,7 +4,7 @@ const express = require("express");
 
 const electricityModel = require('../model/electricity')
 
-router.get('/get/airtime/:pageNo', electricityModel.allElectricity)
-router.get('/get/airtime-ref/:refNo', electricityModel.electricityRef) 
+router.get('/get/electricity/:pageNo', electricityModel.allElectricity)
+router.get('/get/electricity-ref/:refNo', electricityModel.electricityRef) 
 
 module.exports = router 

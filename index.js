@@ -28,17 +28,62 @@ app.get('/', (req, res)=>{
     res.json(
         {
             "welcome": `hello from ulego dashboard api  ${process.env.PORT}`,
-            "login route": 'hello from api',
-            "to get Total-wallets":" hello",
-            "to get wallets by page Num":" hello",
-            "to get all transactions by page":" hello",
-            "to get Total-wallets":" hello",
-            "to get all wallets":" hello",
-            "to get Transfers by page Num":" hello",
-            "to get all Transfers by ref Num":" hello",
-            "to get all data bundle by page Num":" hello",
-            "to get all data bundle by ref Num":" hello",
-            "to get all data bundle by ref Num":" hello",
+            "login route": {
+                "method": "POST",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/auth/login'
+            },
+            "to get Total-wallets":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/wallets/get/wallet/:pageNo'
+            },
+            "to get wallets by page Num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/wallets/get/wallet/:pageNo'
+            },
+            "to get wallets by acct num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/wallets/get/walletacct/:acctNo'
+            },
+            "to get all airtime by page num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/airtime/get/airtime/:pageNo'
+            },
+            "to get all airtime by ref num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/airtime/get/airtime-ref/:refNo'
+            },
+            "to get all data by page num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/data/get/data-bundles/:pageNo'
+            },
+            "to get all data by ref num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/data/get/data-bundle/:refNo'
+            },
+            "to get all electricity by page num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/electricity/get/electricity/:pageNo'
+            },
+            "to get all electricity by ref num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/electricity/get/electricity-ref/:refNo'
+            },
+            "to get all transfer by page num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/transfer/get/all-transfer/:pageNo'
+            },
+            "to get all transfer by ref num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/transfers/get/transfer-ref/:refNo'
+            },
+            "to get all tv cable by page num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/tv-cable/get/tv-cable/:pageNo'
+            },
+            "to get all tv cable by ref num":{
+                "method": "GET",
+                "URL":'https://ulego-dashboard-api.vercel.app/api/tv-cable/get/tv-cable-ref/:refNo'
+            },
         })
 })
 
